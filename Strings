@@ -1,0 +1,178 @@
+import java.lang.*;
+import java.util.*;
+public class Main {
+  public static int noOfSpecial(String str){
+        int cnt=0;
+        for(int i=0;i<str.length();i++){
+          char ch = str.charAt(i);
+          if(!(ch >= '0'&& ch<='9')&&
+            !(ch >= 'A'&& ch<='Z')&&
+            !(ch >= 'a' && ch<='z')){
+              cnt++;
+          }
+        }
+        return cnt;
+
+   }
+  public static String reverse(String str)
+  {
+    String rev = "";
+    for(int i=0;i<str.length();i++)
+    {
+      char ch=str.charAt(i);
+      rev = ch+rev;
+    }
+    return rev;
+  }
+  public static void palindrome(String str)
+  {
+    String rev = "";
+    for(int i=0;i<str.length();i++)
+    {
+      rev=str.charAt(i)+rev;
+    }
+    String reverse = rev;
+    System.out.println(reverse);
+    System.out.println(str);
+    if(str.equals(reverse))
+    {
+      System .out .println("True");
+    }
+    else{
+      System .out .println("False");
+    }
+  }
+  public static void main(String[] args) {
+      diff bt 123 and "123" is that the integer can perform operations 
+      str.length for string length
+      For accessing the ith character str.charAt(index)
+      String country = "India";
+      String name = "Divya";
+      String name1 = "Harshini";
+      String fullName = name+name1;
+      System.out.println(fullName);
+      System.out.println(fullName.length());
+      for(int i=0;i<fullName.length();i++)
+      {
+        System.out.println(fullName.charAt(i));
+      }
+
+      compare two strings
+      s1 > s2 : +ve value
+      s1 == s2 : equal
+      s1 < s2 : -ve value
+      for(int i=0;i<country.length();i++)
+      {
+        System.out.println(country.charAt(i));
+      }
+      To compare 2 strings we use compareTo() function 
+      if(name.compareTo(name1) == 0)
+      {
+        System.out.print("Strings are equal");
+      }
+      else
+      {
+        System.out.print("Not equal");
+      }
+      y cant we use == to compare two stringslike we do in control statements? it is is because ->
+      if(new String("Tony") == new String("Tony"))
+      {
+        System.out.print("Equal");
+      }
+      else{
+        System.out.print("Not Equal");
+      }
+      here we created an object using new keyword.. in this case we are getting not equal so it is better to use compareTo(); function to compare...
+      in arrays length is an attribute or properties whereas in strings length is a method
+      substrings
+      String sentence = "DivyaHarshini";
+      String name = sentence.substring(0, sentence.length());
+      System.out.print(name);
+      String sentence = "DivyaHarshini";
+      String name = sentence.substring(0,5);
+      System.out.print(name);
+      String sentence = "DivyaHarshini";
+      String name = sentence.substring(5);
+      System.out.print(name);
+      ------Strings are immutable---------
+      StringBuilder!!!!!
+      StringBuilder sb = new StringBuilder("Tony");
+      System.out.print(sb);
+      System.out.println(sb.charAt(1));
+      sb.setCharAt(0,'p');
+      System.out.println(sb);
+      sb.insert(0,'y');
+      System.out.println(sb);
+      sb.delete(0,1);
+      System.out.println(sb);
+      StringBuilder sb = new StringBuilder("h");
+      sb.append('e');
+      System.out.println(sb);
+      sb.append('l');
+      System.out.println(sb);
+      sb.append('l');
+      System.out.println(sb);
+      sb.append('o');
+      System.out.println(sb);
+      Q) reverse of a string
+      String st = "zyx";
+      String reverse = "";
+      char ch;
+      for(int i=0;i<st.length();i++)
+      {
+        ch = st.charAt(i);
+        reverse=ch+reverse;
+      }
+      System.out.print(reverse);
+      String country  = "India";
+      for(int i=0;i<country.length();i++)
+      {
+        System.out.println(country.charAt(i));
+      }
+      String country = "India";
+      for(int i=0;i<country.length();i++)
+      {
+        System.out.println((int)country.charAt(i));
+      }
+      Another way to print ascii values of a string is..
+      String name = "India";
+      for(int i=0;i<name.length();i++)
+      {
+        int ch = name.charAt(i);
+        System.out.println(ch);
+      }
+      print no of upper case 
+      String name = "DIVYA harshini";
+      int cnt=0;
+      for(int i=0;i<name.length();i++)
+      {
+        int upper = name.charAt(i);
+        if(upper >=65 && upper<=90)
+        {
+          cnt++;
+        }
+      }
+      System.out.print(cnt);
+      we can also count upper case without converting the characters to integers..just by comparing character.
+      String name = "HARSHINI";
+      int cnt=0;
+      for(int i=0;i<name.length();i++)
+      {
+        char ch = name.charAt(i);
+        if(ch>='A' && ch<='z')
+        {
+          cnt++;
+        }
+      }
+      System.out.println(cnt);
+     System.out.println(noOfSpecial("2222@@@"));
+      System.out.println(reverse("harshini"));
+      q2)Display its ascii values
+      for(int i=0;i<country.length();i++)
+      {
+        System.out.println((int)country.charAt(i));
+      }
+      palindrome("madam");
+
+  }
+}
